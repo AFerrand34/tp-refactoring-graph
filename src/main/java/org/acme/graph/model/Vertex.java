@@ -1,5 +1,9 @@
 package org.acme.graph.model;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.vividsolutions.jts.geom.Coordinate;
 
@@ -11,7 +15,6 @@ import com.vividsolutions.jts.geom.Coordinate;
  *
  */
 public class Vertex {
-
 	/**
 	 * Identifiant du sommet
 	 */
@@ -34,9 +37,18 @@ public class Vertex {
 	 * dijkstra - indique si le sommet est visité
 	 */
 	private boolean visited;
+	/**
+	 * Liste inEdges
+	 */
+	private List<Edge> inEdges;
+	/**
+	 * Liste outEgdges
+	 */
+	private List<Edge> outEdges;
 
 	public Vertex() {
-
+		this.inEdges = new ArrayList<Edge>();
+		this.outEdges = new ArrayList<Edge>();
 	}
 
 	public String getId() {
@@ -78,6 +90,14 @@ public class Vertex {
 
 	public void setVisited(boolean visited) {
 		this.visited = visited;
+	}
+	
+	public Collection<Edge> getInEdges() {
+		return inEdges;
+	}
+
+	public Collection<Edge> getOutEdges() {
+		return outEdges;
 	}
 
 	@Override

@@ -1,5 +1,7 @@
 package org.acme.graph.model;
 
+import java.util.List;
+
 /**
  * 
  * Un arc matérialisé par un sommet source et un sommet cible
@@ -25,7 +27,9 @@ public class Edge {
 
 	public Edge(Vertex source, Vertex target) {
 		this.source = source;
+		this.source.getOutEdges().add(this);
 		this.target = target;
+		this.target.getInEdges().add(this);
 	}
 
 	public String getId() {
