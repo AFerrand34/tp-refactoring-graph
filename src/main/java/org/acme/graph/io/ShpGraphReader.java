@@ -61,6 +61,7 @@ public class ShpGraphReader {
 
 				/* Création de l'arc pour le parcours en sens direct */
 				Edge directEdge = new Edge(source, target);
+				directEdge.setGeometry(geometry);
 				directEdge.setId(id + "-direct");
 				directEdge.setSource(source);
 				directEdge.setTarget(target);
@@ -68,6 +69,7 @@ public class ShpGraphReader {
 
 				/* Création de l'arc pour le parcours en sens opposé */
 				Edge reverseEdge = new Edge(source, target);
+				reverseEdge.setGeometry(geometry);
 				reverseEdge.setId(id + "-reverse");
 				reverseEdge.setSource(target);
 				reverseEdge.setTarget(source);
