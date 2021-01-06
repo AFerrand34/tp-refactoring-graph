@@ -16,12 +16,12 @@ public class Graph {
 	/**
 	 * Liste des sommets
 	 */
-	private List<Vertex> vertices = new ArrayList<>();
+	private List<Vertex> vertices = new ArrayList<Vertex>();
 
 	/**
 	 * Liste des arcs
 	 */
-	private List<Edge> edges = new ArrayList<>();
+	private List<Edge> edges = new ArrayList<Edge>();
 
 	/**
 	 * Récupération de la liste sommets
