@@ -40,10 +40,12 @@ public class Vertex {
 	/**
 	 * Liste inEdges
 	 */
+	@JsonIgnore
 	private List<Edge> inEdges;
 	/**
 	 * Liste outEgdges
 	 */
+	@JsonIgnore
 	private List<Edge> outEdges;
 
 	public Vertex() {
